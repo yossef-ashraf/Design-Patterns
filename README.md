@@ -1,7 +1,3 @@
-Sure, here's the revised version of your repository description with some minor corrections and improvements for clarity and consistency:
-
----
-
 # Design Patterns
 
 This repository contains a collection of design patterns used in software engineering. This project aims to demonstrate how different design patterns can be applied to improve the structure and efficiency of software. The repository contains practical examples annotated in the programming language used for each design pattern mentioned.
