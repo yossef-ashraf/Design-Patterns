@@ -1,19 +1,21 @@
+Sure, here's the revised version of your repository description with some minor corrections and improvements for clarity and consistency:
+
+---
+
 # Design Patterns
 
 This repository contains a collection of design patterns used in software engineering. This project aims to demonstrate how different design patterns can be applied to improve the structure and efficiency of software. The repository contains practical examples annotated in the programming language used for each design pattern mentioned.
 
-# **Contents**
+## Contents
 
 - **Creational Patterns**
-
 - **Structural Patterns**
-
 - **Behavioral Patterns**
 
 ## Project Advantages
 
-- Real-life examples of each design style.
-- Detailed explanations of practical application.
+- Real-life examples of each design pattern.
+- Detailed explanations of practical applications.
 - Clear and complete documentation for each part.
 
 ## How to Use
@@ -27,7 +29,7 @@ This repository contains a collection of design patterns used in software engine
     Review the code and documentation to understand how to implement each design pattern.
 
 3. **Running Examples Locally:**
-    It is recommended to download the project and run it locally to try the codes yourself.
+    It is recommended to download the project and run it locally to try the code yourself.
 
 ## Running the Project with Docker
 
@@ -38,20 +40,24 @@ This repository contains a collection of design patterns used in software engine
 
 2. **Run the Docker Container:**
     ```bash
-    docker run -p 8080:80 design-patterns
+    docker run -p 8000:80 design-patterns
     ```
-3. **OR Run the Docker Container:**
+
+    OR
+
+    **Run the Docker Container with Docker Compose:**
     ```bash
     docker-compose up --build
     docker-compose up
     ```
-4. **Down the Docker Container:**
+
+3. **Shut Down the Docker Container:**
     ```bash
     docker-compose down
     docker-compose down -v
     ```
-    
-    Access the project at `http://localhost:8080`.
+
+    Access the project at `http://localhost:8000`.
 
 ## Running the Project with PHP
 
