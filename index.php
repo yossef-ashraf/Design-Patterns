@@ -38,7 +38,3 @@ echo "<br><br>";
 echo "Builder BMW Model Method ==>";
 var_export($BMWBuilder->build());
 
-
-
-
-Add Builder pattern implementation for creating BMW and Benz cars
