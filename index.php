@@ -11,5 +11,5 @@ $AbstractFactory = new CarsAbstraction(1000);
 echo "Abstract Factory createBenz method ==>";
 print_r($AbstractFactory->createBenz()->price());
 echo "<br><br>";
-echo "Abstract Factory createBenz method ==>";
+echo "Abstract Factory createBMW method ==>";
 print_r($AbstractFactory->createBMW()->price());
