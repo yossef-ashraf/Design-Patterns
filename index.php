@@ -1,7 +1,9 @@
 <?php 
 use Pattern\AbstractFactory\CarsAbstraction;
 
-require("vendor\autoload.php");
+// require("vendor\autoload.php"); \\ path here not work when use docker
+
+require __DIR__ . '/vendor/autoload.php';
 
 
 $AbstractFactory = new CarsAbstraction(1000);
