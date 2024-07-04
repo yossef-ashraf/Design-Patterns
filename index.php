@@ -1,8 +1,10 @@
 <?php 
-use Pattern\AbstractFactory\CarsAbstraction;
 use Pattern\Builder\Builder;
-use Pattern\Builder\CarBuilder\BENZBuilder;
+use Pattern\Factory\Factory\BMWFactory;
+use Pattern\Factory\Factory\BENZFactory;
 use Pattern\Builder\CarBuilder\BMWBuilder;
+use Pattern\Builder\CarBuilder\BENZBuilder;
+use Pattern\AbstractFactory\CarsAbstraction;
 
 // require("vendor\autoload.php"); \\ path here not work when use docker
 
@@ -23,7 +25,6 @@ print_r($AbstractFactory->createBMW()->price());
 
 echo "<br><br><br><br>";
 
-
 echo "Builder";
 echo "<br>====================================";
 echo "<br><br>";
@@ -38,3 +39,16 @@ echo "<br><br>";
 echo "Builder BMW Model Method ==>";
 var_export($BMWBuilder->build());
 
+echo "<br><br><br><br>";
+
+echo "Factory";
+echo "<br>====================================";
+echo "<br><br>";
+$BENZBuilder = new BENZFactory;
+$BMWBuilder = new BMWFactory;
+
+echo "Factory Benz Method ==>";
+print_r($BENZBuilder->BuildBrand());
+echo "<br><br>";
+echo "Factory BMW Method ==>";
+print_r($BMWBuilder->BuildBrand());
