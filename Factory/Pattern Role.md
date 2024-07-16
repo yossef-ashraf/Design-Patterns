@@ -1,3 +1,5 @@
+https://refactoring.guru/design-patterns/factory-method
+
 Factory Method is a structural design pattern that provides an interface for creating objects in a superclass, but allows the subclass to modify the type of objects to be created. Instead of calling the constructor directly, you can call the factory method.
 
 Main ingredients:
