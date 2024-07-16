@@ -1,3 +1,6 @@
+[builder](https://refactoring.guru/design-patterns/builder)
+
+
 The Builder Design Pattern is a creational design pattern used to construct complex objects step by step. It separates the construction of a complex object from its representation, allowing the same construction process to create different representations. Here's how it typically works:
 
 1. Builder Interface: Defines the steps required to build the product. It usually includes methods for setting different parts of the product.
@@ -27,3 +30,4 @@ Imagine you have a complex object like a House with many parts (foundation, wall
 - Reusability: The same construction code can create different representations.
 
 This pattern is especially useful when the construction process is complex or when you need to create different variations of the same object.
+
