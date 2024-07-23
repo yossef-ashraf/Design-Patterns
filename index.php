@@ -5,6 +5,7 @@ use Pattern\Factory\Factory\BENZFactory;
 use Pattern\Builder\CarBuilder\BMWBuilder;
 use Pattern\Builder\CarBuilder\BENZBuilder;
 use Pattern\AbstractFactory\CarsAbstraction;
+use Pattern\Pool\CarPool;
 
 // require("vendor\autoload.php"); \\ path here not work when use docker
 
@@ -52,3 +53,31 @@ print_r($BENZBuilder->BuildBrand());
 echo "<br><br>";
 echo "Factory BMW Method ==>";
 print_r($BMWBuilder->BuildBrand());
+
+
+echo "<br><br><br><br>";
+
+echo "Pool";
+echo "<br>====================================";
+echo "<br><br>";
+$CarPool = new CarPool;
+$CarPool->rentCar(); $car = $CarPool->rentCar() ; // to put two indexs in busyCar array
+echo " Pool rentCar Method ==>";
+print_r($car);
+echo "<br><br>";
+echo " Pool getCountRentCar Method ==>";
+print_r($CarPool->getCountRentCar());
+echo "<br><br>";
+echo " Pool getRentCar Method ==>";
+print_r($CarPool->getRentCar());
+echo "<br><br>";
+
+echo " Pool rentCar Method ==>";
+print_r($CarPool->freeCar($car));
+echo "<br><br>";
+echo " Pool getCountRentCar Method ==>";
+print_r($CarPool->getCountFreeCar());
+echo "<br><br>";
+echo " Pool getRentCar Method ==>";
+print_r($CarPool->getFreeCar());
+echo "<br><br>";
