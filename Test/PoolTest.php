@@ -23,12 +23,14 @@ class PoolTest extends TestCase
         $this->assertIsObject($car);
         $this->assertInstanceOf(Car::class , $car);
         $this->assertIsInt(1, $this->carPool->getCountRentCar());
+        $this->assertIsArray($this->carPool->getRentCar());
     }
 
     public function testCanFreeCar(){
         $this->carPool->freeCar($this->carPool->rentCar());
         $this->assertIsInt(0, $this->carPool->getCountRentCar());
         $this->assertIsInt(1, $this->carPool->getCountFreeCar());
+        $this->assertIsArray($this->carPool->getFreeCar());
     }
 
 
