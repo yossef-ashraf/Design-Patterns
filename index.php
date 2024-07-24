@@ -1,5 +1,7 @@
 <?php 
 use Pattern\Builder\Builder;
+use Pattern\Clone\Car;
+use Pattern\Clone\Engine;
 use Pattern\Factory\Factory\BMWFactory;
 use Pattern\Factory\Factory\BENZFactory;
 use Pattern\Builder\CarBuilder\BMWBuilder;
@@ -81,3 +83,63 @@ echo "<br><br>";
 echo " Pool getRentCar Method ==>";
 print_r($CarPool->getFreeCar());
 echo "<br><br>";
+
+
+
+echo "<br><br><br><br>";
+
+echo "clone";
+echo "<br>====================================";
+echo "<br><br>";
+
+$originalEngine = new Engine(150, 200);
+echo "Original Car Engine Horsepower: {$originalEngine->horsepower}<br><br><br>";
+echo "Original Car Engine fast: {$originalEngine->fast}<br><br><br>";
+
+$originalCar = new Car("Toyota", "Corolla", $originalEngine);
+
+// Surface clone
+$shallowClonedCar = clone $originalCar;
+// Modify the engine power in the superficially cloned version
+$shallowClonedCar->engine->horsepower = 200;
+$shallowClonedCar->engine->fast = 400;
+// print the results
+echo "Shallow Cloned Car Engine Horsepower: {$shallowClonedCar->engine->horsepower}<br><br><br>";
+echo "Original Car Engine Horsepower after shallow clone modification: {$originalCar->engine->horsepower}<br><br><br>";
+echo "Shallow Cloned Car Engine fast: {$shallowClonedCar->engine->fast}<br><br><br>";
+echo "Original Car Engine fast after shallow clone modification: {$originalCar->engine->fast}<br><br><br>";
+
+// deep clone
+$deepClonedCar = clone $originalCar;
+$deepClonedCar->engine = clone $deepClonedCar->engine;
+// Modify the engine power in the deep clone
+$deepClonedCar->engine->horsepower = 250;
+$deepClonedCar->engine->fast = 700;
+// print the results
+echo "Deep Cloned Car Engine Horsepower: {$deepClonedCar->engine->horsepower}<br><br><br>";
+echo "Original Car Engine Horsepower after deep clone modification: {$originalCar->engine->horsepower}<br><br><br>";
+echo "Deep Cloned Car Engine fast: {$deepClonedCar->engine->fast}<br><br><br>";
+echo "Original Car Engine fast after deep clone modification: {$originalCar->engine->fast}<br><br><br>";
+
+/*
+Results:
+Original Car Engine Horsepower: 150
+
+Original Car Engine speed: 200
+
+Shallow Cloned Car Engine Horsepower: 200
+
+Original Car Engine Horsepower after shallow clone modification: 200
+
+Shallow Cloned Car Engine speed: 400
+
+Original Car Engine fast after shallow clone modification: 400
+
+Deep Cloned Car Engine Horsepower: 250
+
+Original Car Engine Horsepower after deep clone modification: 200
+
+Deep Cloned Car Engine speed: 700
+
+Original Car Engine fast after deep clone modification: 400
+*/
