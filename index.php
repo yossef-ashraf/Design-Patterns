@@ -8,6 +8,7 @@ use Pattern\Builder\CarBuilder\BMWBuilder;
 use Pattern\Builder\CarBuilder\BENZBuilder;
 use Pattern\AbstractFactory\CarsAbstraction;
 use Pattern\Pool\CarPool;
+use Pattern\SimpleFactory\SimpleFactory;
 
 // require("vendor\autoload.php"); \\ path here not work when use docker
 
@@ -143,3 +144,24 @@ Deep Cloned Car Engine speed: 700
 
 Original Car Engine fast after deep clone modification: 400
 */
+
+echo "<br><br><br><br>";
+
+echo "Simple Factory";
+echo "<br>====================================";
+echo "<br><br>";
+$SimpleFactory = new SimpleFactory;
+
+echo " Simple Factory createJuice Apple ==>";
+$obj =$SimpleFactory->createJuice("Apple");
+print_r($obj);
+echo "<br><br>";
+echo $obj->pour();
+echo "<br><br>";
+
+echo " Simple Factory createJuice Orange ==>";
+$obj =$SimpleFactory->createJuice("Orange");
+print_r($obj);
+echo "<br><br>";
+echo $obj->pour();
+echo "<br><br>";
