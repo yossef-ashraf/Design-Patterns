@@ -16,14 +16,12 @@ services:
       - "DB_DATABASE=DSP"
       - "DB_USERNAME=DSP"
       - "DB_PASSWORD=DSP"
-      - "REDIS_HOST=redis"
-      - "REDIS_PORT=6379"
     networks:
       - service-network
 
   nginx:
     image: nginx:alpine
-    container_name: web-server
+    container_name: nginx-web-server
     restart: unless-stopped
     tty: true
     ports:
@@ -58,13 +56,7 @@ services:
       - PMA_HOST=mysql
     networks:
       - service-network
-  redis:
-    image: redis:4.0-alpine
-    command: redis-server --appendonly yes
-    ports:
-      - "6379:6379"
-    networks:
-      - service-network
+
 
 volumes:
   mysqldata:
