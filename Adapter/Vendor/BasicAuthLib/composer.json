@@ -1,0 +1,16 @@
+{
+    "name": "yossef-ashraf/basic-auth",
+    "description": "Basic Authentication Library",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "BasicAuth\\": "BasicAuth/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yossef-ashraf",
+            "email": "yossefa538@gmail.com"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "yossef-ashraf/token-auth",
+    "description": "Token Authentication Library",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "TokenAuth\\": "TokenAuth/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yossef-ashraf",
+            "email": "yossefa538@gmail.com"
+        }
+    ]
+}

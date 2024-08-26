@@ -13,5 +13,20 @@
     ],
     "require-dev": {
         "phpunit/phpunit": "^10.5"
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "Adapter/Vendor/BasicAuthLib"
+        },
+        {
+            "type": "path",
+            "url": "Adapter/Vendor/TokenAuthLib"
+        }
+    ],
+    "require": {
+        "yossef-ashraf/basic-auth": "*@dev",
+        "yossef-ashraf/token-auth": "*@dev"
+    },
+    "minimum-stability": "dev"
 }
