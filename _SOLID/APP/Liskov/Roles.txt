@@ -1,0 +1,6 @@
+                                            - Liskov Substitution Principle - 
+
+- Subtypes must be substitutable for their base types. -
+- In other words, any code that uses a base type should be able to work with a
+  subtype without knowing the difference. -
+- This principle is a fundamental principle of object-oriented programming. -
