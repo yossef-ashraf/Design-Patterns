@@ -1,0 +1,6 @@
+                                         - open close Principle -
+
+Role :-
+1. Class should be open for extension but closed for modification
+2. Class should be open for inheritance but closed for modification
+3. Class should be open for modification but closed for extension
