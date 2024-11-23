@@ -1,0 +1,8 @@
+                                                       - Interface Segregation Principle - 
+
+The Interface Segregation Principle (ISP) states that clients should not be forced to depend on interfaces they
+don't use. Instead of having a large, general-purpose interface, break it down into smaller,
+more specialized interfaces that meet the needs of specific clients.
+This principle is intended to promote modular, flexible, and maintainable software design.
+It is a part of SOLID principles of object-oriented design.
+
