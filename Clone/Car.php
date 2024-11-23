@@ -12,12 +12,12 @@ class Car {
         $this->engine = $engine;
     }
 
-    // استنساخ سطحي
+    // Shallow Clone
     // public function shallowClone() {
     //     return clone $this;
     // }
 
-    // // استنساخ عميق
+    // Deep Clone
     // public function deepClone() {
     //     $clonedCar = clone $this;
     //     $clonedCar->engine = clone $this->engine;
