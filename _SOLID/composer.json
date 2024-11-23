@@ -1,0 +1,15 @@
+{
+    "name": "yossef/solid",
+    "autoload": {
+        "psr-4": {
+            "APP\\": "APP/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yossef-ashraf",
+            "email": "yossefa538@gmail.com"
+        }
+    ],
+    "require": {}
+}
